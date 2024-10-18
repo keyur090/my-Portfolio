@@ -3,11 +3,11 @@ import { GrInstagram } from "react-icons/gr";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
-import { MdOutlineEmail } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
-import { chatapp, weather, bgremove } from "./images";
+import {  weather, bgremove } from "./images";
 import { gemini } from "./images";
 import contact from "./images/contact.png";
+import { GitHub } from "@mui/icons-material";
 
 export const menu = [
   { name: "About" },
@@ -67,7 +67,7 @@ export const projects = [
     image: bgremove,
     category: "Web",
     data: {
-      description: `Introducing a powerful image processing tool that allows users to easily remove backgrounds, set new backgrounds, blur images, and apply various enhancements—all in a seamless, user-friendly interface.`,
+      description: `A background remover powerful image processing tool that allows users to easily remove backgrounds, set new backgrounds, blur images, and apply various enhancements—all in a seamless, user-friendly interface designed for both beginners and professionals alike. `,
     },
 
     stack: [
@@ -215,8 +215,8 @@ export const socialHandles = [
     link: "https://www.linkedin.com/in/keyur-vaghasiya-50338b215",
   },
   {
-    name: "Gmail",
-    icon: <MdOutlineEmail />,
-    link: "mailto:vaghasiyakeyur825@gmail.com",
+    name: "Github",
+    icon: <GitHub />,
+    link: "https://github.com/keyur090",
   },
 ];
