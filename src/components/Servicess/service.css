@@ -1,0 +1,171 @@
+#certificates .certificates__group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.center__text{
+    text-align: center;
+}
+
+#certificates .service{
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    color: var(--color-text);
+    padding: 1.5px;
+    isolation: isolate;
+    cursor: pointer;
+    /* border: solid 1px var(--color-primary); */
+}
+
+
+
+#certificates .service::before,
+#certificates .service::after{
+    content: "";
+    position: absolute;
+
+}
+
+#certificates .service::before{    
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(
+        var(--color-primary),
+        transparent 60deg,
+        transparent 180deg,
+        var(--color-primary),
+        transparent 240deg 
+        ); 
+    inset: -50%;
+    z-index: -2;
+    animation: spin 9s linear infinite;
+    animation-play-state: running;
+
+}
+
+.certificates__inner{
+  background-color: var(--color-ui-2);
+  width: 100%;
+  height: 100%;
+    z-index: 2;
+    border-radius: 1.2rem;
+    padding: 40px 25px;
+
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+#certificates .service:hover::before{
+    animation-play-state: running;
+    background-image: conic-gradient(
+        skyblue,
+        transparent 60deg,
+        transparent 180deg,
+        skyblue,
+        transparent 240deg 
+        ); 
+}
+
+#certificates .service ::after{
+    background: var(--color-ui-2);
+    inset: 0.25rem;
+    border-radius: calc(1.2rem - 0.25rem);
+    z-index: -1;
+    transition: var(--transition);
+}
+
+#certificates .service .service__top{
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+}
+
+#certificates .icon__container{
+    width: 80px;
+    background: var(--color-ui-2);
+    border: solid 1px var(--color-primary);
+    margin-right: 8px;
+
+}
+#certificates .service .iconn{
+    font-size: 35px;
+    color: yellow;
+}
+#certificates .service .iconr{
+    font-size: 35px;
+    color:  rgb(135, 206, 235);
+}
+
+
+#certificates .service .icon{
+    font-size: 40px;
+    color: var(--color-primary);
+}
+
+#certificates .service .title{
+    font-size: 25px;
+    background: linear-gradient(to right, var(--color-primary) 0%, var(--color-white) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#certificates .service .description{
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+    transition: var(--transition);
+}
+
+#certificates .service :hover .description{
+    color: var(--color-text);
+}
+
+#certificates .service .service__bottom{
+     margin-top: 30px;
+     display: flex;
+     justify-content: center;
+     transition: 0.3s linear;
+    
+}
+#certificates .service .service__bottom :hover{
+    transform: scale(1.1);
+    
+}
+
+
+#certificates .service .btn.btn__primary{
+    background: linear-gradient(190deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    background-size: 200% auto;
+   
+
+}
+#certificates .service .btn.btn__primary{
+   
+    background-position: right center left !important;
+}
+
+/* .service{
+ background-color: var(--color-ui-2);
+} */
+
+@media (max-width:1100px){
+    #certificates .certificates__group{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #certificates .service__top{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
