@@ -5,7 +5,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { MdOutlineEmail } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
-import { chatapp, weather } from "./images";
+import { chatapp, weather, bgremove } from "./images";
 import { gemini } from "./images";
 import contact from "./images/contact.png";
 
@@ -62,12 +62,12 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Chat App",
-    demoLink: "https://keyur-git-main-chat-app.netlify.app/",
-    image: chatapp,
+    title: "Background Remover",
+    demoLink: "https://image-editor-plum-zeta.vercel.app/",
+    image: bgremove,
     category: "Web",
     data: {
-      description: `A real-time chat app built with React and Socket.IO uses Firebase for authentication. Users log in with Firebase Authentication, and chat messages are exchanged instantly via Socket.IO. The UI includes a chat interface, user lists, and real-time message updates.`,
+      description: `Introducing a powerful image processing tool that allows users to easily remove backgrounds, set new backgrounds, blur images, and apply various enhancements—all in a seamless, user-friendly interface.`,
     },
 
     stack: [

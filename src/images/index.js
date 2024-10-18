@@ -13,5 +13,7 @@ export {default as chatapp} from "./chatapp.png"
 export {default as logos} from "./logos.png"
 export {default as logoj} from "./logoj.jpeg"
 export {default as gemini} from "./gemini.png"
+export {default as bgremove} from "./bgremove.png"
+
 
 
