@@ -4,9 +4,9 @@ import "./header.css";
 import Facts from "./Facts";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
-const PDF__FILE__URL = "http://localhost:3000/Keyur's Resume.pdf";
+const PDF__FILE__URL = "http://localhost:3000/Keyur'sResume.pdf";
 
 function Header() {
 
@@ -16,7 +16,7 @@ function Header() {
     typeSpeed: 90,
     deleteSpeed: 80,
     delaySpeed: 8000,
-  })
+  });
 
   const [word] = useTypewriter({
     words: ["Keyur Vaghasiya."],
@@ -24,21 +24,36 @@ function Header() {
     typeSpeed: 40,
     deleteSpeed: 80,
     delaySpeed: 5000,
-  })
-
-
+  });
 
   const container = useRef(null);
   gsap.registerPlugin(useGSAP);
 
-  const downloadCVurl = (url) => {
-    const filename = url.split("/").pop();
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download", filename);
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
+  const downloadCVurl = async (url) => {
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/pdf',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to download file");
+      }
+
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const aTag = document.createElement("a");
+      aTag.href = blobUrl;
+      aTag.setAttribute("download", "Keyur'sResume.pdf");
+      document.body.appendChild(aTag);
+      aTag.click();
+      aTag.remove();
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error("Error downloading the file:", error);
+    }
   };
 
   useGSAP(
