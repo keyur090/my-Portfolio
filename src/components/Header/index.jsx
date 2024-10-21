@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
-const PDF__FILE__URL = "http://localhost:3000/Keyur'sResume.pdf";
+const PDF__FILE__URL = "https://myportfoliokeyurvaghasiya.vercel.app/Keyur'sResume.pdf";
 
 function Header() {
 

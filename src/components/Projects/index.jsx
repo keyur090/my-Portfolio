@@ -11,8 +11,6 @@ const tabs = [
   { name: "Apps" },
 ];
 
-
-
 function Projects() {
   const [displayproject, setdisplayproject] = useState(projects);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -61,17 +59,15 @@ function Projects() {
           ></span>
         </nav>
         <div className="card__container">
-         {displayproject.map((project, index) => (
-          <Card
-          title={project.title}
-          image={project.image}
-          demoLink={project.demoLink}
-          data={project.data}
-          key={index}
-          ></Card>
-         ))}
-         
-         
+          {displayproject.map((project, index) => (
+            <Card
+              title={project.title}
+              image={project.image}
+              demoLink={project.demoLink}
+              data={project.data}
+              key={index}
+            ></Card>
+          ))}
         </div>
       </div>
     </section>

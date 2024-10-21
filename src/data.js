@@ -1,6 +1,6 @@
 import { DiReact } from "react-icons/di";
 import { GrInstagram } from "react-icons/gr";
-import { BsWhatsapp } from "react-icons/bs";
+import { BsSkype } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -205,9 +205,9 @@ export const socialHandles = [
     link: "https://www.instagram.com/keyur_vaghasiyaa",
   },
   {
-    name: "Whatsapp",
-    icon: <BsWhatsapp />,
-    link: "https://wa.me/919313147262",
+    name: "Skype",
+    icon: <BsSkype />,
+    link: "https://join.skype.com/invite/xkP3wraXpBPM",
   },
   {
     name: "LinkedIn",
