@@ -3,7 +3,7 @@
 }
 
 #about .about__container{
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 400px auto;
     gap: 40px;
 

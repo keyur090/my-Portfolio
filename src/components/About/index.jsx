@@ -6,11 +6,11 @@ function About() {
   return (
     <section id="about">
       <div className="section__wrapper about__container">
-        <div className="me__container blur__effect">
+        {/* <div className="me__container blur__effect">
           <div className="photo__container">
             <img src={profile2} alt="" />
           </div>
-        </div>
+        </div> */}
         <div className="section__header">
           <h2 className="primary__title">About Me</h2>
           <h1 className="title">

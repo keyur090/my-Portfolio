@@ -8,16 +8,15 @@ import { MdOutlineEmail } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 
 function Contact() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    toast.success("Message Sent Successfully ");
+    toast.success("Message Sent Successfully");
     console.log("clicktoast");
-    setInput('');
-  
-          
+    setInput("");
+
     emailjs
       .sendForm("service_b5jgrmk", "template_ksak16z", form.current, {
         publicKey: "LVE2GVYQTnjSHndaJ",
@@ -50,7 +49,6 @@ function Contact() {
             <article className="contact__option">
               <MdOutlineEmail className="contact__icon" />
               <h3>Email</h3>
-              <h5>vaghasiyakeyur825@gmail.com</h5>
               <a
                 href="mailto:vaghasiyakeyur825@gmail.com"
                 target="blank"
@@ -62,7 +60,6 @@ function Contact() {
             <article className="contact__option">
               <TfiSkype className="contact__icon" />
               <h3>Skype</h3>
-              <h5>Keyur Vaghasiya</h5>
               <a
                 href="https://join.skype.com/invite/sM7e64Klj612"
                 target="blank"
@@ -74,7 +71,6 @@ function Contact() {
             <article className="contact__option">
               <BsWhatsapp className="contact__icon" />
               <h3>Whatsapp</h3>
-              <h5>+91 9313147262</h5>
               <a
                 href="https://wa.me/919313147262"
                 target="blank"

@@ -13,7 +13,7 @@
     overflow: hidden;
     border-radius: 1.2rem;
     color: var(--color-text);
-    padding: 1.5px;
+    padding: 0.5px;
     isolation: isolate;
     cursor: pointer;
     /* border: solid 1px var(--color-primary); */
@@ -151,10 +151,6 @@
    
     background-position: right center left !important;
 }
-
-/* .service{
- background-color: var(--color-ui-2);
-} */
 
 @media (max-width:1100px){
     #certificates .certificates__group{

@@ -4,7 +4,7 @@ import { BsSkype } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { AiFillLinkedin } from "react-icons/ai";
-import {  weather, bgremove } from "./images";
+import {  weather, bg_rmv } from "./images";
 import { gemini } from "./images";
 import contact from "./images/contact.png";
 import { GitHub } from "@mui/icons-material";
@@ -63,8 +63,8 @@ export const projects = [
   {
     id: 3,
     title: "Background Remover",
-    demoLink: "https://image-editor-plum-zeta.vercel.app/",
-    image: bgremove,
+    demoLink: "https://bg-remover-dashboard.vercel.app/",
+    image: bg_rmv,
     category: "Web",
     data: {
       description: `A background remover powerful image processing tool that allows users to easily remove backgrounds, set new backgrounds, blur images, and apply various enhancements—all in a seamless, user-friendly interface designed for both beginners and professionals alike. `,
@@ -135,7 +135,7 @@ export const experience = [
   //   ],
   // },
   {
-    title: "Frontend Development",
+    title: "Frontend Developer",
     data: [
       {
         skill: "HTML",

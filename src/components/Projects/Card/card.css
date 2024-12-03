@@ -48,8 +48,14 @@
 }
 
 .card .picture{
-    height: 250px;
     overflow: hidden;
+    height: 200px;
+    padding: 5px;
+}
+
+.card .picture img{
+    object-fit: contain;
+    
 }
 
 .card .card__details{
@@ -220,3 +226,5 @@
     display: inline-block;
     background: var(--card-primary);
 }
+
+
